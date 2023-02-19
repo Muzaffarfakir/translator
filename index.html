@@ -1,0 +1,193 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>muju translator app</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(#5D6BFF, #5DFFCA);
+      height: 100vh;
+    }
+
+    textarea {
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 7px;
+      outline-color: #A3F3CA;
+    }
+
+    select {
+      text-align: center;
+      display: block;
+      border: 2px solid black;
+      border-radius: 3px;
+
+      margin: 10px auto;
+
+    }
+
+    button {
+      margin: 20px auto;
+      display: block;
+      background: black;
+      color: white;
+      border: 2px solid black;
+      border-radius: 5px;
+      height: 40px;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <select name="" id="s1">
+    <option value="English">English</option>
+
+
+    <textarea placeholder="Write Here What Ever You Want To translate in your language" name="" id="t1" cols="30" rows="10"></textarea>
+  </select>
+  <select name="" id="s2">
+    <option value="Amharic">Amharic
+    </option>
+    <option value="Arabic">Arabic
+    </option>
+    <option value="Bielarus">Bielarus
+    </option>
+    <option value="Bemba">Bemba
+    </option>
+    <option value="Bislama">Bislama
+    </option>
+    <option value="Bajan">Bajan</option>
+    <option value="Bengali">Bengali</option>
+    <option value="Tibetan">Tibetan</option>
+    <option value="Breton">Breton</option>
+    <option value="Bosnian">Bosnian</option>
+    <option value="Catalan">Catalan</option>
+    <option value="Coptic">Coptic</option>
+    <option value="Czech">Czech</option>
+    <option value="Welsh">Welsh</option>
+    <option value="Danish">Danish</option>
+    <option value="Dzongkha">Dzongkha</option>
+    <option value="German">German</option>
+    <option value="Maldivian">Maldivian</option>
+    <option value="Greek">Greek</option>
+    <option value="English">English</option>
+    <option value="Spanish">Spanish</option>
+    <option value="Estonian">Estonian</option>
+    <option value="Basque">Basque</option>
+    <option value="Persian">Persian</option>
+    <option value="Finnish">Finnish</option>
+    <option value="Fanagalo">Fanagalo</option>
+    <option value="Faroese">Faroese</option>
+    <option value="French">French</option>
+    <option value="Gujarati">Gujarati</option>
+    <option value="Galician">Galician</option>
+    <option value="Hausa">Hausa</option>
+    <option value="Hebrew">Hebrew</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Hungarian">Hungarian</option>
+    <option value="Croatian">Croatian</option>
+    <option value="Indonesian">Indonesian</option>
+    <option value="Icelandic">Icelandic</option>
+    <option value="Italian">Italian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Kazakh">Kazakh</option>
+    <option value="Khmer">Khmer</option>
+    <option value="Panjabi">Panjabi</option>
+    <option value="Pakistani">Pakistani</option>
+    <option value="Dutch">Dutch</option>
+    <option value="Nepali">Nepali</option>
+    <option value="Burmese">Burmese</option>
+    <option value="Malay">Malay</option>
+    <option value="Norwegian">Norwegian</option>
+    <option value="Kannada">Kannada</option>
+    <option value="Korean">Korean</option>
+    <option value="Kyrgyz">Kyrgyz</option>
+    <option value="Lao">Lao</option>
+    <option value="Latin">Latin</option>
+    <option value="Uzbek">Uzbek</option>
+    <option value="Zulu">Zulu</option>
+    <option value="Yiddish">Yiddish</option>
+    <option value="Turkish">Turkish</option>
+    <option value="Ukrainian">Ukrainian</option>
+    <option value="Vietnamese">Vietnamese</option>
+    <option value="Kurdish">Kurdish</option>
+    <option value="Latvian">Latvian</option>
+    <option value="Mende">Mende</option>
+    <option value="Malagasy">Malagasy</option>
+    <option value="Maori">Maori</option>
+    <option value="Niuean">Niuean</option>
+    <option value="Nyanja">Nyanja</option>
+    <option value="Maltese">Maltese</option>
+    <option value="Russian">Russian</option>
+    <option value="Albanian">Albanian</option>
+    <option value="Telugu">Telugu</option>
+    <option value="Tetum">Tetum</option>
+    <option value="Tamil">Tamil</option>
+    <option value="Thai">Thai</option>
+    <option value="Turkmen">Turkish</option>
+    <option value="Tongan">Tongan</option>
+    <option value="Swahili">Swahili</option>
+    <option value="Somali">Somali</option>
+    <option value="Serbian">Serbian</option>
+    <option value="Pijin">Pijin</option>
+    <option value="Pashto">Pashto</option>
+    <option value="Polish">Polish</option>
+    <option value="Portuguese">Portuguese</option>
+    <option value="Palauan">Palauan</option>
+    <option value="Kirundi">Kirundi</option>
+    <option value="Romanian">Romanian</option>
+    <option value="Sango">Sango</option>
+    <option value="Sinhala">Sinhala</option>
+    <option value="Slovak">Slovak</option>
+    <option value="Samoan">Samoan</option>
+    <option value="Shona">Shona</option>
+    <option value="Tigrinya">Tigrinya</option>
+    <option value="Tajik">Tajik</option>
+    <option value="Tswana">Tswana</option>
+    <option value="Wolof">Wolof</option>
+    <option value="Xhosa">Xhosa</option>
+
+
+
+
+
+
+
+
+
+
+    <textarea name="" id="t2" cols="30" rows="10"></textarea>
+  </select>
+  <button id="btn" type="submit">Translate</button>
+  <script>
+    let btn = document.getElementById("btn");
+    let s1 = document.getElementById("s1");
+    let s2 = document.getElementById("s2");
+    let t1 = document.getElementById("t1");
+    let t2 = document.getElementById("t2");
+
+
+    btn.addEventListener("click", (e) => {
+
+      let api = `https://api.mymemory.translated.net/get?q=${t1.value}!&langpair=${s1.value}|${s2.value}`
+
+      fetch(api).then((res) => res.json()).then((data) => {
+        console.log(data)
+        t2.innerHTML = data.responseData.translatedText
+        t1.value = "";
+
+
+      }).catch((er) => {
+        console.log(er)
+      })
+
+    })
+  </script>
+
+
+</body>
+
+</html>
